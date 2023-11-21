@@ -1,0 +1,21 @@
+@font-face {
+    font-family: f1;
+    src: url(f1.ttf);
+}
+#head{
+    color: aliceblue;
+    font-size: 35;
+    padding-bottom: -20px;
+}
+
+#score{
+    color: aliceblue;
+    font-size: 25;
+}
+
+body{
+    font-family: f1;
+    text-align: center;
+    background: url(bg1.png);
+    background-size: cover;
+}
