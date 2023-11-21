@@ -5,7 +5,6 @@
 #head{
     color: aliceblue;
     font-size: 35;
-    padding-bottom: -20px;
 }
 
 #score{
@@ -18,4 +17,19 @@ body{
     text-align: center;
     background: url(bg1.png);
     background-size: cover;
+}
+
+#surface{
+    width: 540px;
+    height: 540px;
+    background-color: white;
+
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    background: url(bg2.png);
+    background-size: cover;
+    border: 3px solid aqua;
+    border-radius: 25px;
 }
