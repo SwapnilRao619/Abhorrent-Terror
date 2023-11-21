@@ -2,14 +2,14 @@
     font-family: f1;
     src: url(f1.ttf);
 }
+
 #head{
     color: aliceblue;
-    font-size: 35;
+    display: inline-block;
 }
 
 #score{
     color: aliceblue;
-    font-size: 25;
 }
 
 body{
@@ -32,4 +32,11 @@ body{
     background-size: cover;
     border: 3px solid aqua;
     border-radius: 25px;
+}
+
+#surface div{
+    width: 180px;
+    height: 180px;
+    background-image: url(bg3s.png);
+    background-size: cover;
 }
