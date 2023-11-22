@@ -15,11 +15,11 @@ function game(){
         document.getElementById("surface").appendChild(tile)
     }  
     
-    setInterval(setmole1,1000)
-    setInterval(setmole2,1500)
-    setInterval(setmole3,2000)
-    setInterval(setmole4,2500)
-    setInterval(setantimole1,5000)
+    setInterval(setmole1,700)
+    setInterval(setmole2,1200)
+    setInterval(setmole3,1800)
+    setInterval(setmole4,2300)
+    setInterval(setantimole1,2500)
 }
 
 function randomint(){
