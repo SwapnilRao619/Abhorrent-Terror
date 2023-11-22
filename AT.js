@@ -7,8 +7,16 @@ let scoreb=0
 let gameend=false
 let count=0
 
+function playmusic(nameau){
+    let audio = new Audio(nameau);
+    audio.play();
+}
+
 window.onload=function(){
-    game();
+    document.getElementById('b1').addEventListener('click', function () {
+        playmusic("m1.mp3");
+        game();
+    });
 }
 
 function game(){
