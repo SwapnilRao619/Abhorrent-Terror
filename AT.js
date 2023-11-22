@@ -3,6 +3,9 @@ let moletile2
 let moletile3
 let moletile4
 let moletile5
+let scoreb=0
+let gameend=false
+let count=0
 
 window.onload=function(){
     game();
@@ -12,6 +15,7 @@ function game(){
     for(let i=0;i<9;i++){
         let tile=document.createElement("div")
         tile.id=i.toString()
+        tile.addEventListener("click", selecttile)  
         document.getElementById("surface").appendChild(tile)
     }  
     
@@ -28,6 +32,9 @@ function randomint(){
 }
 
 function setmole1(){
+    if(gameend){
+        return;
+    }
     if(moletile1){
         moletile1.innerHTML=""
     } 
@@ -52,6 +59,9 @@ function setmole1(){
 }
 
 function setmole2(){
+    if(gameend){
+        return;
+    }
     if(moletile2){
         moletile2.innerHTML=""
     } 
@@ -76,6 +86,9 @@ function setmole2(){
 }
 
 function setmole3(){
+    if(gameend){
+        return;
+    }
     if(moletile3){
         moletile3.innerHTML=""
     } 
@@ -100,6 +113,9 @@ function setmole3(){
 }
 
 function setmole4(){
+    if(gameend){
+        return;
+    }
     if(moletile4){
         moletile4.innerHTML=""
     } 
@@ -124,6 +140,9 @@ function setmole4(){
 }
 
 function setantimole1(){
+    if(gameend){
+        return;
+    }
     if(moletile5){
         moletile5.innerHTML=""
     }
@@ -145,4 +164,34 @@ function setantimole1(){
     }
     moletile5=document.getElementById(num)
     moletile5.appendChild(mole)
+}
+
+function selecttile(){
+    if(gameend){
+        return;
+    }
+    if(this == moletile1){
+        scoreb+=10;
+        document.getElementById("score").innerText=scoreb.toString();
+    }
+    else if(this == moletile2){
+        scoreb+=10;
+        document.getElementById("score").innerText=scoreb.toString();
+    }
+    else if(this == moletile3){
+        scoreb+=10;
+        document.getElementById("score").innerText=scoreb.toString();
+    }
+    else if(this == moletile4){
+        scoreb+=10;
+        document.getElementById("score").innerText=scoreb.toString();
+    }
+    else if(this == moletile5){
+        count+=1;
+        scoreb-=20;
+        if(count==2){
+            document.getElementById("score").innerText= "Game Over! Score: " + scoreb.toString();
+            gameend=true
+        }
+    }
 }
