@@ -7,6 +7,10 @@ let scoreb=0
 let gameend=false
 let count=0
 
+function reloaded(){
+    location.reload();
+}
+
 function playmusic(nameau){
     let audio = new Audio(nameau);
     audio.play();
@@ -15,6 +19,10 @@ function playmusic(nameau){
 window.onload=function(){
     document.getElementById('b1').addEventListener('click', function () {
         playmusic("m1.mp3");
+        var ele = document.getElementById('b1')
+        if (ele){
+            ele.parentNode.removeChild(ele)
+        }
         game();
     });
 }
@@ -200,6 +208,7 @@ function selecttile(){
         if(count==2){
             document.getElementById("score").innerText= "Game Over! Score: " + scoreb.toString();
             gameend=true
+            setTimeout(reloaded,5000);
         }
     }
 }

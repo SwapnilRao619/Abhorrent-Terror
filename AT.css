@@ -3,6 +3,29 @@
     src: url(f1.ttf);
 }
 
+#b1{
+    font-family: f1;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    padding: 20px 30px;
+    font-size: 32px;
+    background-color: rgb(255, 0, 174);
+    color:white;
+    border:none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#b1:hover{
+    background-color: rgb(251, 255, 0);
+    color:black;
+
+}
+
 #head{
     color: aliceblue;
     display: inline-block;
